@@ -80,7 +80,63 @@
         console.log(my_function_5('1', 1));
         console.log(my_function_5('1', 2));
 
+        // Case switch:
+        function my_function_6(param_1){
+            var which_one = "";
 
-        // quede 1:27:45
+            switch(param_1){
+                case 1:
+                    which_one = "First option";
+                    break;
+                case 2:
+                    which_one = "Second option";
+                    break;
+                case 3:
+                    which_one = "First option";
+                    break;
+                default:
+                    which_one = "None selected";
+                    break;
+            }
+            return which_one
+        }
+
+        console.log(my_function_6(1));
+        console.log(my_function_6(2));
+        console.log(my_function_6(3));
+        console.log(my_function_6(4));
+
+        // Case switch: multiples options
+        function my_function_7(param_1){
+            var which_one = "";
+
+            switch(param_1){
+                case 1:
+                case 2:
+                case 3:
+                    which_one = "1, 2 or 3";
+                    break;
+                case 4:
+                case 5:
+                case 6:
+                    which_one = "4, 5 or 6";
+                    break;
+                case 7:
+                case 8:
+                case 9:
+                    which_one = "7, 8 or 9";
+                    break;
+                default:
+                    which_one = "None selected";
+                    break;
+            }
+            return which_one
+        }
+
+        console.log(my_function_7(2));
+        console.log(my_function_7(5));
+        console.log(my_function_7(8));
+        console.log(my_function_7(10));
         
+        console.log(Math.round(Math.pow(Math.sqrt(2) + Math.sqrt(2), 2)));
 </script>

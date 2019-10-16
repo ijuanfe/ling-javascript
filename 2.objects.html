@@ -1,0 +1,101 @@
+<script>
+    // 1. Objects: 
+    // similar to arrays, instead of using indexes it uses properties (Key:value)
+
+        var my_object_me = {
+            "name": "Juan Felipe",
+            "lastname": "Orozco Escobar",
+            "age": "30",
+            "sport": ["Table tennis", "Cycling", "Running"],
+            "favorite color": "Blue",
+        };
+
+        // lot of ways of accesing objecs properties: dot notation and bracket notation
+        console.log(my_object_me.name);
+        console.log(my_object_me["name"]);
+        console.log(my_object_me['name']);
+        
+        console.log(my_object_me.sport[2]);
+        console.log(my_object_me["sport"][2]);
+        console.log(my_object_me['sport'][2]);
+        
+
+        // Bracket notation for properties with spaces
+        console.log(my_object_me["favorite color"]);
+        console.log(my_object_me['favorite color']);
+
+        // Updating objects properties
+        console.log(my_object_me);
+        my_object_me.name = "Juanfe";
+        my_object_me["age"] = "31";
+        my_object_me['favorite color'] = "White";
+        console.log(my_object_me);
+
+        // Adding new properties to an object
+        my_object_me.iq = "120";
+        my_object_me["height"] = "1.80";
+        console.log(my_object_me);
+
+        // Deleting object properties
+        //delete my_object_me.iq;
+
+        // Check if an object has a propertie
+        console.log(my_object_me.hasOwnProperty("age"));
+        console.log(my_object_me.hasOwnProperty("wight"));
+
+        // Array of objects
+        var my_array_of_objects = [
+            {
+                "1":"One",
+                "2":"Two",
+                "3":"Three"
+            },
+            {
+                "4":"Four",
+                "5":"Five",
+                "6":"Six",
+                type:"random",
+                "type":"random2" // Returns the last one
+            }
+        ];
+        console.log(my_array_of_objects);
+        console.log(my_array_of_objects[0]);
+        console.log(my_array_of_objects[1].type);
+        console.log(my_array_of_objects[1]["type"]);
+
+        // Accesing nested objects and arrays
+        var my_nested_object = {
+            "car": {
+                "inside": {
+                    "glove box": "maps",
+                    "passenger seat": "crumbs"
+                },
+                "outside": {
+                    "trunk": "jack"
+                }
+            }
+        };
+
+        console.log(my_nested_object.car.inside["passenger seat"]);
+
+        var my_nested_array = [
+            
+            {
+                type: "flowers",
+                list: [
+                    "rose", "tulip", "dandelion"
+                ]
+            },
+            {
+                type: "trees",
+                list: [
+                    "fir", "pine", "birch"
+                ]
+            }
+        ];
+
+        console.log(my_nested_array[0].type);
+        console.log(my_nested_array[0].list[1]);
+        
+        // quede en 2:10:15
+</script>
