@@ -1,0 +1,121 @@
+<script>
+    console.log("Hi again!");
+
+    // Compound assignment with augmented addition, subtraction, multiplication and diviton
+        var a = 1;
+        console.log("a value: " + a);
+        a += 1;
+        console.log("a value: " + a);
+        var b = 1;
+        console.log("b value: " + b);
+        b -= 1;
+        console.log("b value: " + b);
+        var c = 5;
+        console.log("b value: " + c);
+        c *= 2;
+        console.log("b value: " + c);
+        var d = 20;
+        console.log("b value: " + d);
+        d /= 2;
+        console.log("b value: " + d);
+    
+    // Escaping literal quotes in strings:
+
+        /* 
+            \' single quote
+            \" double quote
+            \\ backslash
+            \n new line
+            \r carriage return
+            \t tab
+            \b backspace
+            \f form feed
+        */
+
+        var my_name1 = 'Juan Felipe \"The King\"';
+        console.log(my_name1);
+        var my_name2 = 'Juan Felipe "The King"';
+        console.log(my_name2);
+        if( my_name1 === my_name2 ){
+            console.log("si");
+        }else{
+            console.log("no");
+        }
+        var my_name = "Juan Felipe \"The King\" ";
+        console.log(my_name);
+        var my_name = "Juan Felipe 'The King' "; // Singles quotes, no escaping needed
+        console.log(my_name);
+        var my_link_1 = "<a ref=\"https://www.google.com.co/\" target=\"_blank\"> Link </a>";
+        var my_link_2 = '<a ref=https://www.google.com.co/ target=_blank> Link </a>';
+        // ignoring single and double quotes with "`"
+        var my_var_1 = `Juan Felipe "The King", 'The King'.`;
+        console.log(my_var_1);
+        var my_var_2 = "First line \t\t 1 \nSecond line \t 2 \nThird line \t\t 3 \n ";
+        console.log(my_var_2);
+
+    // Concatenating strings:
+        
+        var first_string = "First part, ";
+        var second_string = "second part.";
+        var final_string = first_string + second_string;
+        console.log(final_string);
+        var first_string = "First part, ";
+        first_string += "second part.";
+        console.log(first_string);
+        var first_string = "First part, " + second_string;
+        console.log(first_string);
+
+    // String functions:
+
+        // String length:
+            var my_string_1 = "Juan";
+            console.log(my_string_1.length);
+        // Bracket notation: find a charater with specific index within a string
+            console.log(my_string_1[0]);
+            console.log(my_string_1[1]);
+            console.log(my_string_1[2]);
+            console.log(my_string_1[3]);
+            console.log(my_string_1[4]);                        // Out of range: undefined
+            console.log(my_string_1[my_string_1.length - 1]);   // Last character of the string
+            for( i = 0; i < my_string_1.length; i++){
+                console.log(my_string_1[i]);
+            }
+
+    // Arrays and Nested Arrays (Multi dimentional arrays):
+            
+        var my_array_1 = [ "Juan", 30, "Software Engineer" ];
+        console.log( my_array_1[0] + " is " + my_array_1[1] + " years old, and will be a " + my_array_1 + " very soon!" );
+
+        var my_array_2 = [[ "Juan", "Felipe", "Orozco", "Escobar"], 30, "Software Engineer" ];
+        console.log( my_array_2[0][0] + my_array_2[0][1] + my_array_2[0][2] + my_array_2[0][3] + " is " + my_array_2[1] + " years old, and will be a " + my_array_2[2] + " very soon!" );
+
+        var my_array_3 = [ 1, 2, 3 ];
+        console.log(my_array_3[0]);
+        my_array_3[0] = 10;     // First position of the array modified
+        console.log(my_array_3[0]);
+
+        var my_array_4 = [ [[["Hola!"]]], 2, 3 ];
+        console.log(my_array_4[0][0][0][0]);
+
+        // Add element to the end of an array
+        my_array_4.push("Chao!");
+        console.log(my_array_4[3]);
+        my_array_4.push([":D"]);
+        console.log(my_array_4[4][0]);
+
+        // Remove last element of an array
+        console.log(my_array_4);
+        var removed_element = my_array_4.pop();
+        console.log(my_array_4);         // Print array without last element
+        console.log(removed_element);    // Print removed element
+
+        // Remove first element of an array
+        var my_array_5 = [ 1, 2, 3, 4, 5 ];
+        my_array_5.shift();
+        console.log(my_array_5);
+
+        // Add element to the beggining of the array
+        my_array_5.unshift(["=D", "='("]);
+        console.log(my_array_5);
+
+</script>

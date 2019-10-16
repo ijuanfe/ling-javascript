@@ -1,0 +1,86 @@
+<script>
+    
+    // 1. Declaring and calling functions:
+        function my_function_0( param_1, param_2 ){
+            console.log( param_1 + " " + param_2 );
+        }
+        my_function_0( "Hola", "Juan!" );
+ 
+        // no return value, return is undefined
+        function my_function_1(){
+            var a = 1;
+        }
+        console.log(my_function_1());
+        console.log(my_function_1);     // This return the function it self not the call
+
+        var my_global = 10;
+        function my_function_2(my_global){
+            console.log(my_global);
+            var my_global = 5;
+            console.log(my_global);
+        }
+        my_function_2(my_global);
+
+        function my_function_3(param_1){
+            return "Hola " + param_1 + "!";
+        }
+        var my_return = my_function_3("Juan");
+        console.log(my_return);
+
+        var my_array = [1,2,3,4,5];
+        console.log(typeof(my_array));                  // type object
+        console.log(typeof(JSON.stringify(my_array)));  // type string
+
+        console.log(my_array.shift());
+        console.log(my_array);
+
+        // Example: Queue function
+        function my_queue(array, item){
+            array.push(item);
+            return array.shift();
+        }
+        
+        console.log("Before: "+JSON.stringify(my_array));
+        console.log("Next in line: " + my_queue(my_array, 6));
+        console.log("After: "+JSON.stringify(my_array));
+
+        // Functions with conditionals and booleans (if, else, true, false)
+        function my_function_4(param_1){
+            if(typeof(param_1) == 'number'){
+                return "Es un numero.";
+            }else if(typeof(param_1) == 'string'){
+                return "Es un string.";
+            }else{
+                return "No se sabe que es.";
+            }
+        }
+        console.log(my_function_4(1));
+        console.log(my_function_4('Juan'));
+        console.log(my_function_4(my_array));
+
+        // Equality, inequality and strict operators:
+        function my_function_5(param_1, param_2){
+
+            var my_result = '';
+            if(param_1 === param_2){
+                my_result += 'They are strictly equal.';
+            }
+            if (param_1 == param_2){ // Makes a type convertion
+                my_result +=  'They are equal.';
+            }
+            if (param_1 != param_2){ // Makes a type convertion
+                my_result +=  'They are not equal.';
+            }
+            if (param_1 !== param_2){
+                my_result +=  'They are strictly not equal.';
+            }
+            return my_result;
+        }
+        console.log(my_function_5(1, 1));
+        console.log(my_function_5('1', 1));
+        console.log(my_function_5('1', 2));
+
+
+        // quede 1:27:45
+        
+</script>
