@@ -96,6 +96,38 @@
 
         console.log(my_nested_array[0].type);
         console.log(my_nested_array[0].list[1]);
+
+    // 2. Loops: while, for, do while
+
+        var counter = 0;
+        while (counter < my_array_of_objects.length){
+            console.log(my_array_of_objects[counter]);
+            counter++;
+        }
         
-        // quede en 2:10:15
+        for(var counter = 0; counter < my_array_of_objects.length; counter++){
+            console.log(my_array_of_objects[counter]);
+        }
+
+        // Counting backwards with a for loop
+        for(var counter = my_array_of_objects.length; counter >= 0; counter--){
+            console.log(my_array_of_objects[counter]);
+        }
+        
+        // Nested loop to iterating multidimentional arrays
+        var my_multidimentional_array = [[1,2],[3,4],[5,6]];
+        for(var i = 0; i < my_multidimentional_array.length; i++){
+            for(var j = 0; j < my_multidimentional_array[i].length; j++){
+                console.log(my_multidimentional_array[i][j]);
+            }
+        }
+        
+        for(var i = 0; i < my_nested_array.length; i++){
+            for(var j = 0; j < my_multidimentional_array[i].length; j++){
+                console.log(my_multidimentional_array[i][j]);
+            }
+        }
+
+        // quede en 2:22:46
+
 </script>
