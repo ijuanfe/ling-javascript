@@ -44,7 +44,7 @@
         console.log(my_object_me.hasOwnProperty("wight"));
 
         // Array of objects
-        var my_array_of_objects = [
+        var my_array_of_objects_0 = [
             {
                 "1":"One",
                 "2":"Two",
@@ -58,10 +58,10 @@
                 "type":"random2" // Returns the last one
             }
         ];
-        console.log(my_array_of_objects);
-        console.log(my_array_of_objects[0]);
-        console.log(my_array_of_objects[1].type);
-        console.log(my_array_of_objects[1]["type"]);
+        console.log(my_array_of_objects_0);
+        console.log(my_array_of_objects_0[0]);
+        console.log(my_array_of_objects_0[1].type);
+        console.log(my_array_of_objects_0[1]["type"]);
 
         // Accesing nested objects and arrays
         var my_nested_object = {
@@ -100,18 +100,18 @@
     // 2. Loops: while, for, do while
 
         var counter = 0;
-        while (counter < my_array_of_objects.length){
-            console.log(my_array_of_objects[counter]);
+        while (counter < my_array_of_objects_0.length){
+            console.log(my_array_of_objects_0[counter]);
             counter++;
         }
         
-        for(var counter = 0; counter < my_array_of_objects.length; counter++){
-            console.log(my_array_of_objects[counter]);
+        for(var counter = 0; counter < my_array_of_objects_0.length; counter++){
+            console.log(my_array_of_objects_0[counter]);
         }
 
         // Counting backwards with a for loop
-        for(var counter = my_array_of_objects.length; counter >= 0; counter--){
-            console.log(my_array_of_objects[counter]);
+        for(var counter = my_array_of_objects_0.length; counter >= 0; counter--){
+            console.log(my_array_of_objects_0[counter]);
         }
         
         // Nested loop to iterating multidimentional arrays
@@ -127,7 +127,86 @@
                 console.log(my_multidimentional_array[i][j]);
             }
         }
+        
+        var time = 10;
+        do{
+            console.log("Tiempo: " + time);
+            time--;
+        }while(time>=0)
 
+        var my_array_of_objects_1 = [
+            {
+                "first_name": "Juan",
+                "last_name": "Orozco",
+                "number": "12345"
+            },
+            {
+                "first_name": "Jose",
+                "last_name": "Orozco",
+                "number": "11111"
+            },
+            {
+                "first_name": "Nanda",
+                "last_name": "Orozco",
+                "number": "22222"
+            }
+        ];
+
+        function look_up_profile(name,property){
+            
+            for(var i = 0; i< my_array_of_objects_1.length; i++){
+                if(my_array_of_objects_1[i].first_name === name){
+                    console.log(my_array_of_objects_1[i][property] || "No such property");
+                }
+            }
+        }
+
+        look_up_profile("Juan", "number");
+        look_up_profile("Jose", "number");
+        look_up_profile("Nanda", "number");
+        look_up_profile("Nanda", "age");
+    
+    // 3. Random numbers: Math
+        
+        console.log(Math.random());
+
+        console.log(Math.floor(Math.random() * 10)); // Numbers from 0 to 9
+        
+        // Random number between two values
+        function random_between(max, min){
+            console.log(Math.floor(Math.random() * (max - min) + min));
+        }
+        random_between(5,10);
+
+        console.log(typeof("54"));
+        console.log(typeof(parseInt("54")));
+
+        // Radix: to specify the base of the number
+        console.log(parseInt("10011", 2));
+        
+        // Ternary operator: another way of if-else statement
+        true ? console.log("It is true") : console.log("It is false");
+
+        // var and let keywords
+
+        var hola = "hola";
+        var hola = "holi";
+        console.log("'var' let you declare a variable twice or more: " + hola);
+
+        let hi = "hi";
+        //let hi = "hi";
+        console.log("'let' does not let you declare a variable twice or more: " + hi);
         // quede en 2:22:46
+
+        
+        function test(){
+            //"use strict"; // catch coding mistakes
+            var mi_variable="jiji";
+
+            console.log("I'm using 'use strict' " + mi_variable);
+        }
+        test();
+        console.log(mi_variable);
+        
 
 </script>
