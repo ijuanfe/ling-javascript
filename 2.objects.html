@@ -184,10 +184,10 @@
         // Radix: to specify the base of the number
         console.log(parseInt("10011", 2));
         
-        // Ternary operator: another way of if-else statement
+    // 4. Ternary operator: another way of if-else statement
         true ? console.log("It is true") : console.log("It is false");
 
-        // var and let keywords
+    // 5. var, let and cons keywords
 
         var hola = "hola";
         var hola = "holi";
@@ -196,9 +196,7 @@
         let hi = "hi";
         //let hi = "hi";
         console.log("'let' does not let you declare a variable twice or more: " + hi);
-        // quede en 2:22:46
-
-        
+                
         function test(){
             //"use strict"; // catch coding mistakes
             var mi_variable="jiji";
@@ -206,7 +204,38 @@
             console.log("I'm using 'use strict' " + mi_variable);
         }
         test();
-        console.log(mi_variable);
         
+        const MY_PY = 3.1416; // read-only variable, a good practice is to use constants variable names with capital letters
+        // my_pi = 3.1418;
+        console.log(MY_PY);
+
+        // Mutate an array declared with const
+        const MY_ARRAY = [1,2,3];
+        console.log(MY_ARRAY);
+        MY_ARRAY[0] = 4;
+        MY_ARRAY[1] = 5;
+        MY_ARRAY[2] = 6;
+        console.log(MY_ARRAY);
+
+        // Prevent object mutation
+        function my_function_0(){
+            const MY_CONSTANTS = {
+                PI: 3.1416
+            };
+            
+            Object.freeze(MY_CONSTANTS);
+
+            try {
+                MY_CONSTANTS.PI = 99; // Trying to change the constant value
+            } catch (error) {
+                console.log(error);
+            }
+            return MY_CONSTANTS.PI;
+        }
+    
+        console.log(my_function_0());
+        
+        // I'm at 2:47:16
+        // https://www.youtube.com/watch?v=PkZNo7MFNFg
 
 </script>
